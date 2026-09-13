@@ -1,0 +1,73 @@
+.stickynav {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid var(--color-border-light);
+  z-index: 30;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  pointer-events: none;
+}
+.stickynav.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.stickynav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 78px;
+}
+
+.stickynav__tabs {
+  display: flex;
+  gap: 24px;
+}
+
+.stickynav__tab {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  padding: 10px 0;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+.stickynav__tab.is-active {
+  color: var(--color-text);
+  border-bottom-color: var(--color-text);
+}
+
+.stickynav__book {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.stickynav__price {
+  font-size: 15px;
+}
+.stickynav__price strong {
+  font-weight: 600;
+}
+.stickynav__price span {
+  color: var(--color-text-secondary);
+}
+
+.stickynav__reserve {
+  background: linear-gradient(to right, #e61e4d, #d70466);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.stickynav__reserve:hover {
+  filter: brightness(0.95);
+}

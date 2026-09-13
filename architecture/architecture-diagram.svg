@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1680 1400" font-family="Inter, Helvetica, Arial, sans-serif">
+
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L8,3 z" fill="#5c6b73"/>
+  </marker>
+  <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L8,3 z" fill="#2b6cb0"/>
+  </marker>
+</defs>
+
+<rect x="0" y="0" width="1680" height="1400" fill="#fbfaf8"/>
+<text x="60" y="52" font-size="28" font-weight="700" fill="#1a1a1a">Vacation-Rental Marketplace — Production Architecture</text>
+<text x="60" y="78" font-size="14" fill="#6b6b6b">Reference scale: Airbnb-class traffic · multi-region active-active · event-driven microservices</text>
+<text x="60" y="108" font-size="12.5" font-weight="700" fill="#8a8478" letter-spacing="0.04em">CLIENTS</text>
+<rect x="60" y="116" width="190" height="56" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="155.0" y="138" font-size="14" font-weight="700" fill="#1a1a1a" text-anchor="middle">Web app</text>
+<text x="155.0" y="159" font-size="11.5" fill="#6b6b6b" text-anchor="middle">React / Next.js, SSR + ISR</text>
+<rect x="268" y="116" width="190" height="56" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="363.0" y="138" font-size="14" font-weight="700" fill="#1a1a1a" text-anchor="middle">iOS app</text>
+<text x="363.0" y="159" font-size="11.5" fill="#6b6b6b" text-anchor="middle">Swift, offline cache</text>
+<rect x="476" y="116" width="190" height="56" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="571.0" y="138" font-size="14" font-weight="700" fill="#1a1a1a" text-anchor="middle">Android app</text>
+<text x="571.0" y="159" font-size="11.5" fill="#6b6b6b" text-anchor="middle">Kotlin, offline cache</text>
+<rect x="684" y="116" width="190" height="56" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="779.0" y="138" font-size="14" font-weight="700" fill="#1a1a1a" text-anchor="middle">Host / Admin console</text>
+<text x="779.0" y="159" font-size="11.5" fill="#6b6b6b" text-anchor="middle">Listing &amp; ops tooling</text>
+<text x="60" y="206" font-size="12.5" font-weight="700" fill="#8a8478" letter-spacing="0.04em">EDGE</text>
+<rect x="60" y="214" width="814" height="58" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="467.0" y="236" font-size="14" font-weight="700" fill="#1a1a1a" text-anchor="middle">Global CDN + Edge cache (CloudFront / Fastly)</text>
+<text x="467.0" y="257" font-size="11.5" fill="#6b6b6b" text-anchor="middle">Static assets, image variants, edge-side includes, DNS-based geo routing</text>
+<rect x="894" y="214" width="240" height="58" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="1014.0" y="236" font-size="14" font-weight="700" fill="#1a1a1a" text-anchor="middle">DDoS / WAF</text>
+<text x="1014.0" y="257" font-size="11.5" fill="#6b6b6b" text-anchor="middle">Bot &amp; abuse protection</text>
+<rect x="1150" y="214" width="470" height="58" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="1385.0" y="236" font-size="14" font-weight="700" fill="#1a1a1a" text-anchor="middle">Global load balancer</text>
+<text x="1385.0" y="257" font-size="11.5" fill="#6b6b6b" text-anchor="middle">Multi-region active-active, health-checked failover</text>
+<line x1="155.0" y1="172" x2="155.0" y2="212" stroke="#5c6b73" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="363.0" y1="172" x2="363.0" y2="212" stroke="#5c6b73" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="571.0" y1="172" x2="571.0" y2="212" stroke="#5c6b73" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="779.0" y1="172" x2="779.0" y2="212" stroke="#5c6b73" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="60" y="314" font-size="12.5" font-weight="700" fill="#8a8478" letter-spacing="0.04em">API LAYER</text>
+<rect x="60" y="322" width="460" height="58" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="290.0" y="344" font-size="14" font-weight="700" fill="#1a1a1a" text-anchor="middle">API Gateway / BFF</text>
+<text x="290.0" y="365" font-size="11.5" fill="#6b6b6b" text-anchor="middle">Request routing, schema per client, GraphQL/REST</text>
+<rect x="540" y="322" width="330" height="58" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="705.0" y="344" font-size="14" font-weight="700" fill="#1a1a1a" text-anchor="middle">AuthN / AuthZ</text>
+<text x="705.0" y="365" font-size="11.5" fill="#6b6b6b" text-anchor="middle">OAuth2 · JWT · session service</text>
+<rect x="890" y="322" width="260" height="58" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="1020.0" y="344" font-size="14" font-weight="700" fill="#1a1a1a" text-anchor="middle">Rate limiting</text>
+<text x="1020.0" y="365" font-size="11.5" fill="#6b6b6b" text-anchor="middle">Per-user &amp; per-IP quotas</text>
+<rect x="1170" y="322" width="450" height="58" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="1395.0" y="344" font-size="14" font-weight="700" fill="#1a1a1a" text-anchor="middle">Service mesh (Envoy/Istio)</text>
+<text x="1395.0" y="365" font-size="11.5" fill="#6b6b6b" text-anchor="middle">mTLS, retries, circuit breaking, tracing</text>
+<line x1="467" y1="272" x2="290" y2="320" stroke="#5c6b73" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="1014" y1="272" x2="770" y2="320" stroke="#5c6b73" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="1385" y1="272" x2="1395" y2="320" stroke="#5c6b73" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="40" y="400" width="1600" height="260" rx="16" fill="#f4f1ea" stroke="#e4ddcd" stroke-width="1.4" stroke-dasharray="0"/>
+<text x="58" y="426" font-size="13" font-weight="700" fill="#8a8478" letter-spacing="0.04em">DOMAIN MICROSERVICES (INDEPENDENTLY DEPLOYABLE, PER-SERVICE DATASTORE)</text>
+<rect x="56" y="440" width="184" height="90" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="148.0" y="462" font-size="13.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Listings</text>
+<text x="148.0" y="483" font-size="10.8" fill="#6b6b6b" text-anchor="middle">CRUD, availability calendar</text>
+<rect x="256" y="440" width="184" height="90" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="348.0" y="462" font-size="13.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Search &amp; Ranking</text>
+<text x="348.0" y="483" font-size="10.8" fill="#6b6b6b" text-anchor="middle">Query understanding, ranking model</text>
+<rect x="456" y="440" width="184" height="90" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="548.0" y="462" font-size="13.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Pricing</text>
+<text x="548.0" y="483" font-size="10.8" fill="#6b6b6b" text-anchor="middle">Dynamic pricing, smart pricing</text>
+<rect x="656" y="440" width="184" height="90" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="748.0" y="462" font-size="13.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Booking / Reservations</text>
+<text x="748.0" y="483" font-size="10.8" fill="#6b6b6b" text-anchor="middle">Inventory locks, saga orchestration</text>
+<rect x="856" y="440" width="184" height="90" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="948.0" y="462" font-size="13.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Payments</text>
+<text x="948.0" y="483" font-size="10.8" fill="#6b6b6b" text-anchor="middle">PCI-scoped, PSP integrations</text>
+<rect x="1056" y="440" width="184" height="90" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="1148.0" y="462" font-size="13.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Reviews &amp; Trust</text>
+<text x="1148.0" y="483" font-size="10.8" fill="#6b6b6b" text-anchor="middle">Ratings, fraud/spam signals</text>
+<rect x="1256" y="440" width="184" height="90" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="1348.0" y="462" font-size="13.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Messaging</text>
+<text x="1348.0" y="483" font-size="10.8" fill="#6b6b6b" text-anchor="middle">Guest↔host chat, translation</text>
+<rect x="1456" y="440" width="184" height="90" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="1548.0" y="462" font-size="13.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Media</text>
+<text x="1548.0" y="483" font-size="10.8" fill="#6b6b6b" text-anchor="middle">Image ingest, transcode, moderation</text>
+<rect x="56" y="546" width="184" height="90" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="148.0" y="568" font-size="13.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">User / Identity</text>
+<text x="148.0" y="589" font-size="10.8" fill="#6b6b6b" text-anchor="middle">Profiles, KYC, verification</text>
+<rect x="256" y="546" width="184" height="90" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="348.0" y="568" font-size="13.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Notifications</text>
+<text x="348.0" y="589" font-size="10.8" fill="#6b6b6b" text-anchor="middle">Push, SMS, email fanout</text>
+<rect x="456" y="546" width="184" height="90" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="548.0" y="568" font-size="13.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Recommendations</text>
+<text x="548.0" y="589" font-size="10.8" fill="#6b6b6b" text-anchor="middle">Personalization, wishlist</text>
+<rect x="656" y="546" width="184" height="90" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="748.0" y="568" font-size="13.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Geo / Maps</text>
+<text x="748.0" y="589" font-size="10.8" fill="#6b6b6b" text-anchor="middle">Geocoding, distance, clustering</text>
+<rect x="856" y="546" width="184" height="90" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="948.0" y="568" font-size="13.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Promotions</text>
+<text x="948.0" y="589" font-size="10.8" fill="#6b6b6b" text-anchor="middle">Coupons, referrals</text>
+<rect x="1056" y="546" width="184" height="90" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="1148.0" y="568" font-size="13.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Host tools</text>
+<text x="1148.0" y="589" font-size="10.8" fill="#6b6b6b" text-anchor="middle">Calendar sync, co-host mgmt</text>
+<rect x="1256" y="546" width="184" height="90" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="1348.0" y="568" font-size="13.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Trust &amp; Safety</text>
+<text x="1348.0" y="589" font-size="10.8" fill="#6b6b6b" text-anchor="middle">Risk scoring, content moderation</text>
+<rect x="1456" y="546" width="184" height="90" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="1548.0" y="568" font-size="13.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">Analytics events</text>
+<text x="1548.0" y="589" font-size="10.8" fill="#6b6b6b" text-anchor="middle">Client + server event capture</text>
+<line x1="1400" y1="380" x2="1400" y2="398" stroke="#5c6b73" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="60" y="700" font-size="12.5" font-weight="700" fill="#8a8478" letter-spacing="0.04em">ASYNCHRONOUS BACKBONE</text>
+<rect x="60" y="706" width="1580" height="56" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="850.0" y="728" font-size="14" font-weight="700" fill="#1a1a1a" text-anchor="middle">Event streaming platform (Kafka / Pulsar)</text>
+<text x="850.0" y="749" font-size="11.5" fill="#6b6b6b" text-anchor="middle">Booking events, price changes, search-index deltas, audit log, CDC from OLTP stores</text>
+<line x1="850" y1="660" x2="850" y2="704" stroke="#5c6b73" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="40" y="800" width="1600" height="260" rx="16" fill="#f4f1ea" stroke="#e4ddcd" stroke-width="1.4" stroke-dasharray="0"/>
+<text x="58" y="826" font-size="13" font-weight="700" fill="#8a8478" letter-spacing="0.04em">DATA &amp; SEARCH LAYER</text>
+<rect x="60" y="840" width="250" height="96" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="185.0" y="862" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">OLTP: PostgreSQL</text>
+<text x="185.0" y="883" font-size="10.6" fill="#6b6b6b" text-anchor="middle">Sharded by listing/user id</text>
+<text x="185.0" y="897" font-size="10.6" fill="#6b6b6b" text-anchor="middle">Primary + read replicas per region</text>
+<rect x="324" y="840" width="220" height="96" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="434.0" y="862" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">Cache: Redis cluster</text>
+<text x="434.0" y="883" font-size="10.6" fill="#6b6b6b" text-anchor="middle">Session, hot listings,</text>
+<text x="434.0" y="897" font-size="10.6" fill="#6b6b6b" text-anchor="middle">availability cache</text>
+<rect x="558" y="840" width="300" height="96" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="708.0" y="862" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">Search: OpenSearch/Elasticsearch</text>
+<text x="708.0" y="883" font-size="10.6" fill="#6b6b6b" text-anchor="middle">Listing index, geo queries,</text>
+<text x="708.0" y="897" font-size="10.6" fill="#6b6b6b" text-anchor="middle">facets, typo tolerance</text>
+<rect x="872" y="840" width="240" height="96" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="992.0" y="862" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">Object storage: S3 / GCS</text>
+<text x="992.0" y="883" font-size="10.6" fill="#6b6b6b" text-anchor="middle">Photos, videos, docs</text>
+<text x="992.0" y="897" font-size="10.6" fill="#6b6b6b" text-anchor="middle">+ CDN origin</text>
+<rect x="1126" y="840" width="300" height="96" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="1276.0" y="862" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">Data warehouse: Snowflake/BigQuery</text>
+<text x="1276.0" y="883" font-size="10.6" fill="#6b6b6b" text-anchor="middle">Batch ETL, BI, ML training sets</text>
+<rect x="1440" y="840" width="220" height="96" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="1550.0" y="862" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">Feature store</text>
+<text x="1550.0" y="883" font-size="10.6" fill="#6b6b6b" text-anchor="middle">Ranking &amp; pricing ML features</text>
+<rect x="60" y="960" width="480" height="62" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="300.0" y="982" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">Search indexer workers</text>
+<text x="300.0" y="1003" font-size="11" fill="#6b6b6b" text-anchor="middle">Consume CDC/events → build &amp; warm search index</text>
+<rect x="560" y="960" width="420" height="62" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="770.0" y="982" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">Stream processors (Flink/Spark)</text>
+<text x="770.0" y="1003" font-size="11" fill="#6b6b6b" text-anchor="middle">Real-time aggregation, fraud scoring</text>
+<rect x="1000" y="960" width="300" height="62" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="1150.0" y="982" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">ML inference services</text>
+<text x="1150.0" y="1003" font-size="11" fill="#6b6b6b" text-anchor="middle">Ranking, pricing, recs</text>
+<rect x="1320" y="960" width="300" height="62" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="1470.0" y="982" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">Batch ML training</text>
+<text x="1470.0" y="1003" font-size="11" fill="#6b6b6b" text-anchor="middle">Offline model training, backfills</text>
+<line x1="850" y1="762" x2="850" y2="798" stroke="#5c6b73" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="850" y1="1022" x2="850" y2="1088" stroke="#5c6b73" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="40" y="1090" width="1600" height="200" rx="16" fill="#f4f1ea" stroke="#e4ddcd" stroke-width="1.4" stroke-dasharray="0"/>
+<text x="58" y="1116" font-size="13" font-weight="700" fill="#8a8478" letter-spacing="0.04em">DEPLOYMENT &amp; PLATFORM</text>
+<rect x="60" y="1130" width="250" height="90" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="185.0" y="1152" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">Kubernetes (multi-region)</text>
+<text x="185.0" y="1173" font-size="10.6" fill="#6b6b6b" text-anchor="middle">Per-service namespaces,</text>
+<text x="185.0" y="1187" font-size="10.6" fill="#6b6b6b" text-anchor="middle">HPA autoscaling</text>
+<rect x="324" y="1130" width="250" height="90" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="449.0" y="1152" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">CI/CD</text>
+<text x="449.0" y="1173" font-size="10.6" fill="#6b6b6b" text-anchor="middle">Trunk-based, canary +</text>
+<text x="449.0" y="1187" font-size="10.6" fill="#6b6b6b" text-anchor="middle">blue/green rollouts</text>
+<rect x="588" y="1130" width="250" height="90" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="713.0" y="1152" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">Infra as code</text>
+<text x="713.0" y="1173" font-size="10.6" fill="#6b6b6b" text-anchor="middle">Terraform, per-env stacks</text>
+<rect x="852" y="1130" width="250" height="90" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="977.0" y="1152" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">Secrets &amp; config</text>
+<text x="977.0" y="1173" font-size="10.6" fill="#6b6b6b" text-anchor="middle">Vault, per-service scoping</text>
+<rect x="1116" y="1130" width="250" height="90" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="1241.0" y="1152" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">Observability</text>
+<text x="1241.0" y="1173" font-size="10.6" fill="#6b6b6b" text-anchor="middle">Prometheus, Grafana,</text>
+<text x="1241.0" y="1187" font-size="10.6" fill="#6b6b6b" text-anchor="middle">OpenTelemetry tracing</text>
+<rect x="1380" y="1130" width="250" height="90" rx="10" fill="#ffffff" stroke="#d8d3c9" stroke-width="1.4"/>
+<text x="1505.0" y="1152" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">Centralized logging</text>
+<text x="1505.0" y="1173" font-size="10.6" fill="#6b6b6b" text-anchor="middle">ELK / Loki, alerting</text>
+<line x1="850" y1="1060" x2="850" y2="1088" stroke="#5c6b73" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="60" y="1330" width="1560" height="50" rx="10" fill="#ffffff" stroke="#e4ddcd"/>
+<text x="80" y="1352" font-size="12" fill="#4a4a4a" font-weight="600">Scaling notes:</text>
+<text x="200" y="1352" font-size="11.5" fill="#6b6b6b">Stateless services autoscale horizontally behind the mesh · DBs sharded by entity + read replicas per region · Search &amp; cache are eventually consistent via the event bus · Media served from CDN edge, never through app servers · Payments isolated in its own PCI-compliant boundary.</text>
+<text x="80" y="1370" font-size="11.5" fill="#6b6b6b">Multi-region: active-active in ≥2 regions with async cross-region replication for OLTP and full replicas of search &amp; cache; DNS/GSLB fails traffic over on region health degradation.</text>
+</svg>

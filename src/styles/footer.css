@@ -1,0 +1,9 @@
+.site-footer {
+  border-top: 1px solid var(--color-border-light);
+  padding: 24px 0;
+  margin-top: 40px;
+}
+.site-footer__inner {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}

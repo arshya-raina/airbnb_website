@@ -1,0 +1,128 @@
+.booking-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 24px;
+  position: sticky;
+  top: 104px;
+}
+
+.booking-card__price-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.booking-card__price {
+  font-size: 22px;
+  font-weight: 600;
+}
+.booking-card__unit {
+  font-size: 16px;
+}
+
+.booking-card__rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+}
+.booking-card__dot {
+  color: var(--color-text-secondary);
+}
+.booking-card__reviews {
+  text-decoration: underline;
+}
+
+.booking-card__form {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.booking-card__dates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.booking-card__field {
+  display: block;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--color-border);
+  cursor: pointer;
+}
+.booking-card__dates .booking-card__field:first-child {
+  border-right: 1px solid var(--color-border);
+}
+.booking-card__field span:first-child {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+}
+.booking-card__field-value {
+  font-size: 14px;
+  color: var(--color-text);
+}
+.booking-card__field--guests {
+  border-bottom: none;
+}
+.booking-card__guest-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.booking-card__reserve {
+  width: 100%;
+  background: linear-gradient(to right, #e61e4d, #d70466);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+.booking-card__reserve:hover {
+  filter: brightness(0.95);
+}
+
+.booking-card__notice {
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin: 0 0 20px;
+}
+
+.booking-card__breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.booking-card__row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+}
+.booking-card__row span:first-child {
+  text-decoration: underline;
+  text-decoration-color: var(--color-text-secondary);
+}
+
+.booking-card__total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 600;
+}
